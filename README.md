@@ -116,9 +116,8 @@ Install all required packages with:
 
 ``` bash
 pip install -r requirements.txt
-Environment Variables
 ```
-
+### Environment Variables
 Create a .env file in the project root with the following values:
 
 ```
@@ -173,7 +172,6 @@ Authentication tokens are handled dynamically.
 No hardcoded tokens are used in the codebase.
 No hardcoded base URL is used in test files.
 Tests are designed to be repeatable and independent.
-The repository should remain public for submission.
 CI Badge
 
 If the badge does not render immediately, wait until the first successful workflow run on GitHub Actions.
