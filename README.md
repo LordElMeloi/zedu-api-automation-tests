@@ -1,22 +1,53 @@
 # Zedu API Automation Tests
 
+![CI](https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/actions/workflows/ci.yml/badge.svg)
+
 ## Overview
-Automated API tests for authentication endpoints using Pytest.
 
-## Setup
-1. Clone repo
-2. Create .env file:
-   BASE_URL=https://api.zedu.chat/api/v1
-   EMAIL=your_email
-   PASSWORD=your_password
+This project contains automated API tests for the Zedu platform using Python, Pytest, and Requests.
 
-3. Install dependencies:
-   pip install -r requirements.txt
+The suite covers authentication and user-flow endpoints from the Zedu Swagger documentation, with tests for:
+- positive scenarios
+- negative scenarios
+- boundary cases
+- edge cases
+- token-based authorization
 
-## Run Tests
-pytest -v
+The goal of the project is to validate API behavior in a clean, maintainable, and repeatable way.
 
-## Structure
-- tests/: test files
-- utils/: reusable functions
-- conftest.py: shared fixtures
+## Tech Stack
+
+- Python 3.13.x
+- Pytest
+- Requests
+- python-dotenv
+- jsonschema
+
+## Prerequisites
+
+Before running the project, ensure the following are installed:
+
+- Python 3.13.x
+- pip
+- git
+
+## Project Structure
+
+```text
+zedu-api-automation-tests/
+├── tests/
+│   ├── test_auth.py
+│   ├── test_users.py
+│   ├── test_validation.py
+│   └── test_edge_cases.py
+├── utils/
+│   ├── auth.py
+│   └── users.py
+├── conftest.py
+├── .env.example
+├── .gitignore
+├── requirements.txt
+├── README.md
+└── .github/
+    └── workflows/
+        └── ci.yml
