@@ -170,3 +170,6 @@ def test_logout_with_missing_platform_header():
 
     assert "status" in data
     assert "message" in data
+
+def test_intentional_failure_for_ci():
+    assert False, "Intentional failure to verify CI pipeline behavior"
