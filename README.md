@@ -76,27 +76,27 @@ Covers missing fields, invalid formats, invalid data types, and boundary value c
 Covers unusual but realistic inputs such as whitespace, casing differences, long values, and optional-field variations.
 
 Design Decisions
-Why helper functions are used
+### Why helper functions are used
 
 Reusable API request logic is placed in utils/ so that request handling is centralized and test files remain readable.
 
-Why fixtures are used
+### Why fixtures are used
 
 Shared Pytest fixtures in conftest.py handle setup logic such as creating a fresh user, logging in, extracting the token, and building auth headers. This keeps tests independent and avoids duplicated setup code.
 
-Why dynamic data is used
+### Why dynamic data is used
 
 Unique data is generated where needed so the suite remains idempotent and can be run multiple times without failing because of reused emails or shared state.
 
-Why tests are grouped by behavior
+### Why tests are grouped by behavior
 
 Test files are organized by feature area so the suite is easier to understand, maintain, and extend.
 
-Why schema validation is included
+### Why schema validation is included
 
 Schema checks confirm that responses are not only successful, but also structurally correct and consistent with backend expectations.
 
-Virtual Environment Setup
+## Virtual Environment Setup
 
 Using a virtual environment is recommended so dependencies stay isolated from your system Python.
 
