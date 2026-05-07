@@ -170,3 +170,4 @@ def test_logout_with_missing_platform_header():
 
     assert "status" in data
     assert "message" in data
+
