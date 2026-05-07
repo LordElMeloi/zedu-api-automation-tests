@@ -53,7 +53,7 @@ def test_register_with_valid_data_to_returns_201():
     assert data["status"] == "success"
     assert data["status_code"] == 201
     assert "message" in data
-    asser isinstance(data["message"], str)
+    assert isinstance(data["message"], str)
 
 
 def test_successful_login_returns_200_and_access_token():
